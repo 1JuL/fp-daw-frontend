@@ -1,0 +1,66 @@
+.home-container::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-image: url("../../assets/home.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
+.post-card {
+  & h4 {
+    display: none;
+  }
+  color: black;
+  & button {
+    width: 200px;
+    height: 45px;
+    border-radius: 10px;
+    color: black;
+    font-weight: 500;
+  }
+  & .buttons-edit-delete {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.edit-button {
+  border: 3px solid #b1dacd;
+  background-color: #8cc8b5; /* Color de fondo del botón Edit */
+  background-image: url("../../assets/edit.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 40px 40px; /* Ajusta el tamaño según sea necesario */
+  padding-right: 20px; /* Asegúrate de que haya espacio para la imagen */
+  color: white;
+  padding: 10px 20px; /* Ajusta el padding según sea necesario */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.delete-button {
+  border: 3px solid #b1dacd;
+  background-color: #8cc8b5; /* Color de fondo del botón Delete */
+  background-image: url("../../assets/trash.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 40px 40px; /* Ajusta el tamaño según sea necesario */
+  padding-left: 20px; /* Asegúrate de que haya espacio para la imagen */
+  color: white;
+  padding: 10px 20px; /* Ajusta el padding según sea necesario */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}

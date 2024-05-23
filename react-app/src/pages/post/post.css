@@ -1,0 +1,22 @@
+.post-card {
+  & input {
+    min-height: 100px;
+    background-color: white;
+  }
+}
+
+/* Estilos para el input */
+#content {
+  width: 98%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: left; /* Asegura que el texto esté alineado a la izquierda */
+  color: black;
+}
+
+/* Estilos para el placeholder */
+#content::placeholder {
+  color: black; /* Color del texto del placeholder */
+  font-style: italic; /* Estilo de la fuente del placeholder */
+}
