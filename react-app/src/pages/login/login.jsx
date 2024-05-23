@@ -12,7 +12,7 @@ const Login = () => {
 
     useEffect(() => {
         if (state.isAuthenticated) {
-            navigate(ROUTES.HOME.path, { replace: true });
+            navigate(ROUTES.START.path, { replace: true });
         }
     }, [state.isAuthenticated, navigate]);
 

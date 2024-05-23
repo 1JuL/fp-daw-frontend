@@ -17,9 +17,15 @@ const Menu = ({ page }) => {
   const goto_Profile = () => {
     navigate(ROUTES.PROFILE.path, { replace: true });
   }
+  const goto_Login = () => {
+    navigate(ROUTES.OVERVIEW.path, { replace: true });
+  }
+  const goto_Signup = () => {
+    navigate(ROUTES.PROFILE.path, { replace: true });
+  }
   const logout = () => {
     dispatch({ type: 'LOGOUT' });
-    localStorage.removeItem('isLoggedIn');
+    localStorage.removeItem('token');
     navigate(ROUTES.LOGIN.path, { replace: true });
   }
 
@@ -28,9 +34,9 @@ const Menu = ({ page }) => {
       case 'home':
         return (
           <>
-            <Button callback={goto_Overview} label={"Overview"} />
-            <Button callback={goto_Profile} label={"Profile"} />
-            <Button callback={logout} label={"Log Out"} />
+            <Button callback={goto_Login} label={"Login"} />
+            <p>or</p>
+            <Button callback={goto_Signup} label={"Signup"} />
           </>
         );
       case 'overview':
