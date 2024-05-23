@@ -2,6 +2,8 @@ import React, { useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../components/AuthContext';
 import { ROUTES } from '../../routes';
+import Logo from '../../assets/favicon.svg'
+import './signup.css'
 
 const SignupForm = () => {
     const { state, dispatch } = useContext(AuthContext);
@@ -59,30 +61,34 @@ const SignupForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input
-                type="text"
-                name="userName"
-                value={userData.userName}
-                onChange={handleChange}
-                placeholder="Nombre de Usuario"
-            />
-            <input
-                type="email"
-                name="email"
-                value={userData.email}
-                onChange={handleChange}
-                placeholder="Correo Electrónico"
-            />
-            <input
-                type="password"
-                name="password"
-                value={userData.password}
-                onChange={handleChange}
-                placeholder="Contraseña"
-            />
-            <button type="submit">Registrarse</button>
-        </form>
+        <div className='container'>
+            <img src={Logo} alt="Description of the image" />
+            <form onSubmit={handleSubmit}>
+                <input
+                    type="text"
+                    name="userName"
+                    value={userData.userName}
+                    onChange={handleChange}
+                    placeholder="Nombre de Usuario"
+                />
+                <input
+                    type="email"
+                    name="email"
+                    value={userData.email}
+                    onChange={handleChange}
+                    placeholder="Correo Electrónico"
+                />
+                <input
+                    type="password"
+                    name="password"
+                    value={userData.password}
+                    onChange={handleChange}
+                    placeholder="Contraseña"
+                />
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+
     );
 };
 

@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../components/AuthContext';
 import { ROUTES } from '../../routes';
+import Logo from '../../assets/favicon.svg'
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -34,7 +35,7 @@ const Login = () => {
                 // Set token from response
                 dispatch({ type: 'LOGIN', payload: token });
                 localStorage.setItem('token', token);
-                navigate(ROUTES.HOME.path, { replace: true });
+                navigate(ROUTES.START.path, { replace: true });
             } else {
                 // Handle failed login
                 alert('Credenciales incorrectas. Inténtalo de nuevo.');
@@ -48,7 +49,8 @@ const Login = () => {
     return (
         <div>
             {!state.isAuthenticated && (
-                <div>
+                <div className='container'>
+                    <img src={Logo} alt="Description of the image" />
                     <form onSubmit={handleLogin}>
                         <input
                             type="email"

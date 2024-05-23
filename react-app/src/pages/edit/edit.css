@@ -1,0 +1,45 @@
+.edit-button {
+  background-image: url("../../assets/post.png");
+}
+
+.delete-button {
+  background-image: url("../../assets/close.png");
+}
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+  width: 96%;
+  gap: 20px;
+
+  & textarea {
+    min-height: 100px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    font-size: large;
+  }
+}
+
+.edit-post {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin: 15px;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 3px solid white;
+  border-radius: 25px;
+  border-color: white;
+  min-width: 60vw;
+  max-width: 60vw;
+  overflow: scroll;
+  & form {
+    width: 100%;
+  }
+}

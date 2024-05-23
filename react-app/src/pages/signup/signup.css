@@ -1,0 +1,22 @@
+input {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  width: 580px;
+  height: 60px;
+  border-radius: 25px;
+  border: 5px solid #a6d190;
+  background-color: #c2e0b5;
+  padding-left: 20px; /* Move the text a bit to the right */
+  font-size: 16px;
+}
+button {
+  height: 50px;
+  width: 300px;
+  border-radius: 30px;
+}
+
+input::placeholder {
+  text-indent: 20px; /* Adjust this value to move the placeholder text more to the right */
+  font-size: large;
+}

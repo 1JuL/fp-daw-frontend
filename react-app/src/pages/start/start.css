@@ -1,0 +1,178 @@
+.post-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 16px;
+  padding-bottom: 10px;
+  margin: 16px 0;
+  border-radius: 8px;
+  background-color: #a6d190;
+  border: 7px solid #c2e0b5;
+  & h2 {
+    font-weight: 600;
+    color: black;
+    align-self: flex-start;
+    margin: 0;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+  & p {
+    background-color: whitesmoke;
+    padding: 15px;
+    min-height: 50px;
+    border-radius: 5px;
+  }
+  color: black;
+}
+
+.post-list {
+  margin: 15px;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 3px solid white;
+  border-radius: 25px;
+  border-color: white;
+  height: 80vh;
+  min-width: 60vw;
+  max-width: 60vw;
+  overflow: scroll;
+}
+
+.search-bar {
+  display: flex;
+  margin: 15px;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 3px solid white;
+  border-radius: 25px;
+  border-color: white;
+  & input {
+    width: 95%;
+    border-radius: 5px;
+    height: 30px;
+    background-color: #202327;
+    color: white;
+  }
+  & button {
+    border-radius: 5px;
+    background-color: #202327;
+    margin-left: 10px;
+  }
+}
+
+.search-bar input::placeholder {
+  text-indent: 20px;
+  color: white;
+}
+
+.post-card h2::before {
+  content: "";
+  width: 50px; /* Ajusta el tamaño del círculo */
+  height: 50px; /* Ajusta el tamaño del círculo */
+  background-color: white; /* Fondo del círculo */
+  border-radius: 50%;
+  margin-right: 15px; /* Ajusta la distancia entre el círculo y el texto */
+  background-image: url("../../assets/user.png"); /* Ruta de la imagen */
+  background-size: 50px 50px; /* Ajusta el tamaño de la imagen dentro del círculo */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-search {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 3px solid white;
+  border-radius: 25px;
+  border-color: white;
+  height: 85vh;
+  width: 18vw;
+  justify-content: space-around;
+  padding-top: 30px;
+
+  & button {
+    padding-left: 70px;
+  }
+}
+
+.menu-container span {
+  font-size: 2rem;
+}
+
+.menu-container button {
+  height: 70px;
+  width: 15vw;
+  font-size: 2rem;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+}
+
+.username-container span {
+  display: inline-block;
+  background-image: url("../../assets/user.png");
+  background-size: 70px; /* Adjust the percentage as needed to make the image smaller */
+  background-repeat: no-repeat;
+  padding-left: 50px; /* Adjust this value to accommodate the width of the image */
+  height: 65px;
+  background-color: white;
+  color: black;
+  width: 12vw;
+  text-align: center; /* Center the text horizontally */
+  padding-top: 10px;
+  border-radius: 10px;
+}
+
+/* Estilo para la imagen en el contenedor de perfil */
+.profile-container::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-image: url("../../assets/settings.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
+/* Estilo para la imagen en el contenedor de nuevo tweet */
+.new-tweet-container::before {
+  content: "";
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  background-image: url("../../assets/write.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
+/* Estilo para la imagen en el contenedor de logout */
+.logout-container::before {
+  content: "";
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  background-image: url("../../assets/logout.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
